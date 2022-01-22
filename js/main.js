@@ -1,20 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-searchEl.addEventListener('click',function () {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus',function () {
-  searchEl.classList.add('focused'); //focus가 되면 
-  searchInputEl.setAttribute('placeholder', '통합검색'); //setAttribute : HTML 속성을 지정
-});
- //포커스가 해제 되었을 때
-searchInputEl.addEventListener('blur',function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
 
@@ -75,6 +58,9 @@ fadeEls.forEach(function (fadeEl, index) {
 }); 
 
 
+
+
+
 // new Swiper(선택자, 옵션)
 new Swiper('.notice-line .swiper-container', {
   direction: 'vertical', // 수직 슬라이드
@@ -112,8 +98,6 @@ new Swiper('.awards .swiper-container', {
     nextEl: '.awards .swiper-next'
   } 
 });
-
-
 
 
 
@@ -178,6 +162,3 @@ spyEls.forEach(function (spyEl) { //익명 함수 안에 각각의 요소를 의
     .addTo(new ScrollMagic.Controller()); //ScrollMagic에서 기본적으로 우리가 추가한 옵션들을 내부의 Controller에 내용을 할당해서 실제로 동작하게 만드는 용도
 
 });
-
-const thisYear = document.querySelector('.this-year'); //html 구조 만들때 이번 연도 나올 부분 만들어줬음
-thisYear.textContent = new Date().getFullYear(); //이번 연도가 숫자 데이터로 this-year라고 저장된 요소 내용으로 들어간다
