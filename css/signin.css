@@ -41,7 +41,8 @@
   width: 100%; /*가로 너비를 최대한 늘려서 사용하겠다*/
   margin-bottom: 12px; /*사이 공간*/
   padding: 15px;
-  border-radius: 1px solid #ddd;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   outline: none; /*focus 되었을 때 파란색 실선 나오지 않게*/
   box-sizing: border-box; /*input은 inline 요소 -> 바꿔주기*/
   font-size: 14px;
